@@ -16,7 +16,7 @@ body {
   background-color: #e7e7e7;
 }
 .price-container {
-  height: 90vh;
+  height: fit-content;
   width: 80%;
   padding: 2rem;
   margin: 3rem auto;
@@ -47,14 +47,16 @@ body {
 .price-cards {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  gap: 0 3rem;
   height: fit-content;
+  flex-wrap: wrap;
   width: 100%;
   font-size: 1.6rem;
   margin: 2rem 0;
 }
 .price-cards .cards {
-  width: 30%;
+  width: 350px;
   padding: 2rem;
   border-radius: 1rem;
   color: white;
@@ -122,4 +124,41 @@ body {
 /* features */
 .price-cards .feature .feature-points {
   margin: 2rem 0;
+}
+
+@media (max-width: 1450px) {
+  .price-cards .cards {
+    width: 300px;
+  }
+}
+@media (max-width: 1250px) {
+  .price-cards .cards {
+    width: 250px;
+  }
+}
+@media (max-width: 1070px) {
+  .title h2 {
+    font-size: 3.5rem;
+  }
+  .title p {
+    font-size: 1.6rem;
+  }
+  .price-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-cards .cards {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .title h2 {
+    font-size: 2.5rem;
+  }
+
+  .price-container {
+    width: 100%;
+    margin: 0;
+  }
 }
